@@ -125,33 +125,19 @@ Aula de como se realiza o Deploy para o cpanel, via Git e GitHub
       git config --global user.email "usuario_cpanel@url_site_cpanel"
       ```
 
-14. **Criar Repositório Git no cPanel**
-    - No terminal do cPanel:
-      ```sh
-      git init
-      git status
-      git add .
-      git commit -m "Primeiro Commit de Conexão"
-      git branch -M main
-      ```
-    - **Conectar Repositório Remoto GITHUB:**
-      ```sh
-      git remote add origin <SSH_do_repositório_GITHUB>
-      ```
-
-15. **Clonar Repositório do GitHub para o cPanel**
+14. **Clonar Repositório do GitHub para o cPanel**
     - No cPanel, abra `Git™ Version Control` e crie um novo repositório.
     - Marque `Clone a Repository`, copie o SSH do GitHub e cole no campo `Clone URL`.
     - Coloque o caminho do repositório no cPanel no campo `Repository Path`.
     - Dê um nome para o repositório e crie.
 
-16. **Gerenciar o Repositório no cPanel**
+15. **Gerenciar o Repositório no cPanel**
     - Abra `Git™ Version Control`, procure pelo seu repositório, e gerencie.
     - Para atualizar:
       - `Pull or Deploy`
       - `Update From Remote`
 
-17. **Operação diária**
+16. **Operação diária**
     - Trabalhar no repositório local no PC
     - Realizar os Commites para o GITHUB 
     - Realizar o DEPLOY para o Cpanel
