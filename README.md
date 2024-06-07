@@ -6,13 +6,45 @@ Aula de como se realiza o Deploy para o cpanel, via Git e GitHub
 
 # Deploy Git / cPanel
 
+## Usando o HTTPS Key 4096
+
 1. **Criar Conta GitHub**
    - Se você ainda não tem, crie uma conta no GitHub em [github.com](https://github.com).
+  
+2. **Criar uma Key no Cpanel de 4096 bits**
+    - Abra o Terminal no Cpanel e digite :
+      
+      ssh-keygen -t rsa -f ~/.ssh/repo -b 4096 -C "username-cepanel@email_cpanel
 
-2. **Criar um Repositório no GitHub**
-   - Crie um novo repositório no GitHub. Se for um projeto JavaScript, não é necessário usar o XAMPP. Para projetos WordPress, você precisará do XAMPP.
+3. **Autorize a Key**
+    - Após a Chave ser Gerada aperte em Authorize
+    - Confirme
 
-3. **Criar ou Verificar a Pasta `.ssh` no Caminho**
+4. **Configurar com o GIT**
+    - Abra a chave Publica Criada no Cpanel e copie o conteudo
+    - Abra o repositório no GITHUB
+    - Setings
+    - Deploy Keys
+    - Add Deploy Key
+    - De um Título e Copie a Key do Cpanel já criada e salve.
+
+5. **Criar a conexao com o GITHUB**
+    - Crie um Repositório no cpanel e copie o caminho
+    - Abra o Git™ Version Control no cpanel
+    - Criar
+    - Daixar true Clone a Repository
+    - Clone URL ( cole o HTTPS do repositório do GITHUB)
+    - Repository Path ( Cole o Caminho do repositorio do cpanel)
+    - Repository name (De um nome para essa conexão) 
+
+6. **Realizando o Deploy**
+    - Abra o Git™ Version Control no cpanel
+    - Escolha a conexao e vá em gerenciar
+    - Informações Básicas , vá em Atualizar
+    - Pull or Deply (Update from remote) - atualização remota
+========================================================================================
+
+2. **Criar ou Verificar a Pasta `.ssh` no Caminho**
    - Verifique se a pasta `.ssh` existe em `C:\Users\USUARIO\.ssh`.
    - Se não existir, crie a pasta.
 
